@@ -1,5 +1,4 @@
-setwd("C:/Users/R/Desktop/JH Certificate Program/Course_4")
-list.files()
+
 myDF <- read.table("household_power_consumption.txt", header = TRUE, sep = ";", as.is=TRUE)
 myDF <- mutate(myDF, Time = as.POSIXct(paste(myDF$Date, myDF$Time), format="%d/%m/%Y %H:%M:%S"))
 myDF$Global_active_power <- as.numeric(myDF$Global_active_power)
